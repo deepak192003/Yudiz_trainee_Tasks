@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1st Number :<input id="first" type="number">
+    2nd Number :<input id="second" type="number">
+    <h3>The result is : </h3>
+    <p id="result"></p>
+    <button id="multiplication">Multiply</button>
+    <button id="divide">Divide</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+           
+            let btn = document.querySelector('#multiplication');
+            btn.addEventListener('click', ()=>{
+                let firstNumber = document.querySelector('#first').value;
+                let secondNumber = document.querySelector('#second').value;
+                let result = document.querySelector('#result');
+                
+                let ans = firstNumber * secondNumber;
+                result.innerHTML = ans;
+            })
+            let dividebtn = document.querySelector('#divide');
+            dividebtn.addEventListener('click', ()=>{
+                let firstNumber = document.querySelector('#first').value;
+                let secondNumber = document.querySelector('#second').value;
+                let result = document.querySelector('#result');
+                let ans = firstNumber/secondNumber;
+                result.innerHTML = ans;
+            })
+        })
+
+    </script>
+</body>
+</html>

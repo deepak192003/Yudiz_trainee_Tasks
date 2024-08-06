@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = Math.floor(Math.random()*10 )+1;
+        console.log(num);
+        let chance = 5;
+        let start = 0;
+        let isMatched = false;
+        while(start<chance)
+        {
+            let guessNum = prompt("Enter a number between 1 tp 10");
+            if(num == guessNum)
+            {
+                isMatched = true;
+                alert("number matched")
+                break;
+            }
+            start++;
+        }
+        if(isMatched == false)
+        {
+            alert("Number not matched");
+        }
+    </script>
+</body>
+</html>
